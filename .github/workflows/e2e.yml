@@ -22,7 +22,7 @@ jobs:
 
       - name: Install xmake
         run: |
-          apt-get update && apt-get install -y curl
+          apt-get update && apt-get install -y curl python3-pip git
           curl -fsSL https://xmake.io/shget.text | bash
           echo "/root/.local/bin" >> $GITHUB_PATH
 
