@@ -3,6 +3,12 @@ set_version("0.1.0")
 set_languages("cxx17")
 
 local function import_ament_xmake_rule()
+    local injected = os.getenv("AMENT_XMAKE_RULE_FILE")
+    if injected and os.isfile(injected) then
+        includes(injected)
+        return true
+    end
+
     for _, prefix in ipairs(path.splitenv(os.getenv("AMENT_PREFIX_PATH") or "")) do
         local rulefile = path.join(
             prefix, "share", "ament_xmake", "xmake", "rules", "ament_xmake", "package.lua")
