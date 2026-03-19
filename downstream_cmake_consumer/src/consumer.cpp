@@ -1,6 +1,6 @@
 #include <iostream>
 
 int main() {
-  std::cout << "downstream_cmake_consumer skeleton" << std::endl;
+  std::cout << "downstream_cmake_consumer linked" << std::endl;
   return 0;
 }
