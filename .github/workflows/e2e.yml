@@ -40,10 +40,17 @@ jobs:
           git clone https://github.com/ros-x/ament_xmake.git \
             $GITHUB_WORKSPACE/ament_xmake
 
+      - name: Build ament_xmake
+        shell: bash
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          colcon build --packages-select ament_xmake --event-handlers console_direct+
+
       - name: Build workspace
         shell: bash
         run: |
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          source install/setup.bash
           colcon build \
             --packages-up-to downstream_cmake_consumer demo_xmake_launch demo_xmake_custom_msg_node demo_xmake_component demo_xmake_mixed \
             --event-handlers console_direct+
