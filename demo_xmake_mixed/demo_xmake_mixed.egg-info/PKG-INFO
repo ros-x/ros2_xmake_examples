@@ -1,5 +1,0 @@
-Metadata-Version: 2.4
-Name: demo_xmake_mixed
-Version: 0.1.0
-Requires-Dist: setuptools
-Dynamic: requires-dist

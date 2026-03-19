@@ -3,7 +3,12 @@ install/
 log/
 
 .xmake/
-demo_xmake_cpp/.build_cache/
-demo_xmake_cpp/.deps/
-demo_xmake_cpp/.objs/
-demo_xmake_cpp/linux/
+.build_cache/
+.deps/
+.objs/
+linux/
+
+# Python build artifacts
+*.egg-info/
+dist/
+__pycache__/
