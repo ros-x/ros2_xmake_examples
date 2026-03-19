@@ -21,7 +21,7 @@ fi
 source "$ROS_SETUP"
 set -u
 
-pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
+python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
 
 # Clone ament_xmake if not present
 if [[ ! -d "$ROOT/ament_xmake" ]]; then

@@ -14,7 +14,7 @@ fi
 source "$ROS_SETUP"
 set -u
 
-pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
+python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
 
 TMPDIR="$(mktemp -d)"
 trap 'rm -rf "$TMPDIR"' EXIT

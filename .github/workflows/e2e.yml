@@ -27,7 +27,7 @@ jobs:
           echo "/root/.local/bin" >> $GITHUB_PATH
 
       - name: Install colcon-xmake
-        run: pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
+        run: python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
 
       - name: Clone ament_xmake
         run: |
