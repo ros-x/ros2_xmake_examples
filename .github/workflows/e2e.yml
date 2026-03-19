@@ -34,7 +34,7 @@ jobs:
           echo "XMAKE_ROOT=y" >> $GITHUB_ENV
 
       - name: Install colcon-xmake
-        run: python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
+        run: python3 -m pip install --break-system-packages --no-deps git+https://github.com/ros-x/colcon-xmake.git
 
       - name: Clone ament_xmake
         run: |
