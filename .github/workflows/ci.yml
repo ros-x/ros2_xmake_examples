@@ -15,3 +15,8 @@ jobs:
           test -f demo_xmake_cpp/xmake.lua
           test -f downstream_cmake_consumer/package.xml
           test -f downstream_cmake_consumer/CMakeLists.txt
+      - name: Verify build types and link contract
+        run: |
+          grep -q '<build_type>ament_xmake</build_type>' demo_xmake_cpp/package.xml
+          grep -q 'find_package(demo_xmake_cpp REQUIRED CONFIG)' downstream_cmake_consumer/CMakeLists.txt
+          grep -q 'target_link_libraries(consumer PRIVATE demo_xmake_cpp::demo_xmake_cpp)' downstream_cmake_consumer/CMakeLists.txt
