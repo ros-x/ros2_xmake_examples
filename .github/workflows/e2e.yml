@@ -26,7 +26,7 @@ jobs:
           curl -fsSL https://raw.githubusercontent.com/d2learn/xlings/refs/heads/main/tools/other/quick_install.sh | bash
           export PATH="$HOME/.xlings/bin:$HOME/.xlings/subos/current/bin:$PATH"
           xlings install xmake
-          ln -s $HOME/.xlings/subos/current/bin/xmake /usr/local/bin/xmake
+          echo "PATH=$HOME/.xlings/bin:$HOME/.xlings/subos/current/bin:$PATH" >> $GITHUB_ENV
 
       - name: Install colcon-xmake
         run: python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
