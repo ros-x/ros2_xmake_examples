@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>demo_xmake_custom_msg_node</name>
+  <version>0.1.0</version>
+  <description>Example ROS node using custom messages from demo_xmake_interfaces.</description>
+  <maintainer email="devnull@example.com">ros2_xmake maintainers</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_xmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>demo_xmake_interfaces</depend>
+
+  <export>
+    <build_type>ament_xmake</build_type>
+  </export>
+</package>

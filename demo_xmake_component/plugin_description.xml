@@ -1,0 +1,7 @@
+<library path="demo_xmake_component">
+  <class name="demo_xmake_component::TalkerComponent"
+         type="demo_xmake_component::TalkerComponent"
+         base_class_type="rclcpp_components::NodeFactory">
+    <description>Talker component built with xmake</description>
+  </class>
+</library>

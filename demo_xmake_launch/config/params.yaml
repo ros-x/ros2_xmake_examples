@@ -1,0 +1,4 @@
+demo_node:
+  ros__parameters:
+    greeting: "hello from demo_xmake_launch"
+    rate_hz: 10.0

@@ -1,0 +1,62 @@
+name: E2E Build & Test
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        ros_distro: [jazzy]
+    runs-on: ubuntu-latest
+    container:
+      image: ros:${{ matrix.ros_distro }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install xmake
+        run: |
+          apt-get update && apt-get install -y curl
+          curl -fsSL https://xmake.io/shget.text | bash
+          echo "/root/.local/bin" >> $GITHUB_PATH
+
+      - name: Install colcon-xmake
+        run: pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
+
+      - name: Clone ament_xmake
+        run: |
+          git clone https://github.com/ros-x/ament_xmake.git \
+            $GITHUB_WORKSPACE/ament_xmake
+
+      - name: Build workspace
+        shell: bash
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          colcon build --event-handlers console_direct+
+
+      - name: Run tests
+        shell: bash
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          source install/setup.bash
+          colcon test --packages-select demo_xmake_cpp downstream_cmake_consumer --event-handlers console_direct+
+          colcon test-result --verbose
+
+      - name: Runtime smoke test
+        shell: bash
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          source install/setup.bash
+          bash scripts/runtime_smoke.sh
+
+      - name: Negative checks
+        shell: bash
+        run: |
+          source /opt/ros/${{ matrix.ros_distro }}/setup.bash
+          bash scripts/e2e_negative_checks.sh

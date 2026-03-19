@@ -1,0 +1,9 @@
+setup.py
+demo_xmake_mixed/__init__.py
+demo_xmake_mixed/py_node.py
+demo_xmake_mixed.egg-info/PKG-INFO
+demo_xmake_mixed.egg-info/SOURCES.txt
+demo_xmake_mixed.egg-info/dependency_links.txt
+demo_xmake_mixed.egg-info/entry_points.txt
+demo_xmake_mixed.egg-info/requires.txt
+demo_xmake_mixed.egg-info/top_level.txt

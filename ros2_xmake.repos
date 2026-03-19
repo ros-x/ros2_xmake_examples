@@ -1,0 +1,5 @@
+repositories:
+  ament_xmake:
+    type: git
+    url: https://github.com/ros-x/ament_xmake.git
+    version: main
