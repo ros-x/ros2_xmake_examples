@@ -1,0 +1,17 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify example layout
+        run: |
+          test -f demo_xmake_cpp/package.xml
+          test -f demo_xmake_cpp/xmake.lua
+          test -f downstream_cmake_consumer/package.xml
+          test -f downstream_cmake_consumer/CMakeLists.txt
