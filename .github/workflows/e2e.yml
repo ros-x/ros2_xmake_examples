@@ -20,11 +20,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install xmake
+      - name: Install xlings and xmake
         run: |
           apt-get update && apt-get install -y curl python3-pip git
-          curl -fsSL https://xmake.io/shget.text | bash
-          echo "/root/.local/bin" >> $GITHUB_PATH
+          curl -fsSL https://raw.githubusercontent.com/d2learn/xlings/refs/heads/main/tools/other/quick_install.sh | bash
+          export PATH="$HOME/.xlings/bin:$HOME/.xlings/subos/current/bin:$PATH"
+          xlings install xmake
+          ln -s $HOME/.xlings/subos/current/bin/xmake /usr/local/bin/xmake
 
       - name: Install colcon-xmake
         run: python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
@@ -37,14 +39,12 @@ jobs:
       - name: Build workspace
         shell: bash
         run: |
-          export PATH="/root/.local/bin:$PATH"
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
           colcon build --event-handlers console_direct+
 
       - name: Run tests
         shell: bash
         run: |
-          export PATH="/root/.local/bin:$PATH"
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
           source install/setup.bash
           colcon test --packages-select demo_xmake_cpp downstream_cmake_consumer --event-handlers console_direct+
@@ -53,7 +53,6 @@ jobs:
       - name: Runtime smoke test
         shell: bash
         run: |
-          export PATH="/root/.local/bin:$PATH"
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
           source install/setup.bash
           bash scripts/runtime_smoke.sh
@@ -61,6 +60,5 @@ jobs:
       - name: Negative checks
         shell: bash
         run: |
-          export PATH="/root/.local/bin:$PATH"
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
           bash scripts/e2e_negative_checks.sh

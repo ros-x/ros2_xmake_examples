@@ -23,6 +23,12 @@ Example ROS 2 packages demonstrating [xmake](https://xmake.io/) as a build syste
 - ROS 2 Jazzy (or later) installed
 - [xmake](https://xmake.io/) installed
 
+> **Tip:** You can use [xlings](https://github.com/d2learn/xlings) to quickly set up xmake and other dev tools:
+> ```bash
+> curl -fsSL https://raw.githubusercontent.com/d2learn/xlings/refs/heads/main/tools/other/quick_install.sh | bash
+> xlings install xmake
+> ```
+
 ### Clone and install dependencies
 
 ```bash
