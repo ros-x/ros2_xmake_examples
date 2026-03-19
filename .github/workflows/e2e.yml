@@ -20,11 +20,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install dependencies and xmake
+      - name: Install xlings and project dependencies
+        env:
+          XLINGS_NON_INTERACTIVE: 1
         run: |
           apt-get update && apt-get install -y curl python3-pip git
-          curl -fsSL https://xmake.io/shget.text | bash -s v2.9.8
-          echo "PATH=$HOME/.local/bin:$PATH" >> $GITHUB_ENV
+          curl -fsSL https://raw.githubusercontent.com/d2learn/xlings/refs/heads/main/tools/other/quick_install.sh | bash
+          export PATH="$HOME/.xlings/bin:$HOME/.xlings/subos/current/bin:$PATH"
+          xlings install --verbose
+          xmake --root --version
+          echo "PATH=$HOME/.xlings/bin:$HOME/.xlings/subos/current/bin:$PATH" >> $GITHUB_ENV
           echo "XMAKE_ROOT=y" >> $GITHUB_ENV
 
       - name: Install colcon-xmake
