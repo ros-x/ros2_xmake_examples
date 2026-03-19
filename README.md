@@ -3,6 +3,7 @@
 Example packages for validating ROS 2 + xmake integration.
 
 - `demo_xmake_cpp`: package using `build_type=ament_xmake`.
+  - demonstrates `add_ros_deps("rclcpp", "geometry_msgs")` for ROS package-oriented linking
 - `downstream_cmake_consumer`: package using `ament_cmake` that consumes exported config from `demo_xmake_cpp`.
 
 See scenario details in `docs/SCENARIOS.md`.
