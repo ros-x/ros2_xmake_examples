@@ -4,6 +4,7 @@
 
 Package: `demo_xmake_cpp`
 - builds static library + binary with xmake
+- includes `turtle_circle_node` (rclcpp) publishing `geometry_msgs/Twist` to `/turtle1/cmd_vel`
 - exports package config for downstream consumers
 
 ## Scenario 2: Downstream ament_cmake consumer

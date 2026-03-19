@@ -7,3 +7,23 @@ Example packages for validating ROS 2 + xmake integration.
 
 See scenario details in `docs/SCENARIOS.md`.
 See release changes in `CHANGELOG.md`.
+
+## Run turtlesim circle demo
+
+Build:
+
+```bash
+source /opt/ros/jazzy/setup.bash
+colcon build --packages-select demo_xmake_cpp
+source install/setup.bash
+```
+
+Run in two terminals:
+
+```bash
+ros2 run turtlesim turtlesim_node
+```
+
+```bash
+ros2 run demo_xmake_cpp turtle_circle_node
+```
