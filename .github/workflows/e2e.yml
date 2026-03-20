@@ -21,11 +21,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install xlings and project dependencies
+      - name: Install system and ROS dependencies
+        run: |
+          apt-get update && apt-get install -y curl python3-pip git
+          apt-get install -y --no-install-recommends \
+            ros-${{ matrix.ros_distro }}-tf2-ros \
+            ros-${{ matrix.ros_distro }}-tf2-geometry-msgs \
+            ros-${{ matrix.ros_distro }}-cv-bridge \
+            ros-${{ matrix.ros_distro }}-image-transport \
+            ros-${{ matrix.ros_distro }}-rosbag2-cpp \
+            ros-${{ matrix.ros_distro }}-rosbag2-transport \
+            ros-${{ matrix.ros_distro }}-nav2-costmap-2d \
+            ros-${{ matrix.ros_distro }}-hardware-interface \
+            ros-${{ matrix.ros_distro }}-robot-state-publisher \
+            ros-${{ matrix.ros_distro }}-joint-state-publisher \
+            ros-${{ matrix.ros_distro }}-diagnostic-updater
+
+      - name: Install xlings and xmake
         env:
           XLINGS_NON_INTERACTIVE: 1
         run: |
-          apt-get update && apt-get install -y curl python3-pip git
           curl -fsSL https://raw.githubusercontent.com/d2learn/xlings/refs/heads/main/tools/other/quick_install.sh | bash
           export PATH="$HOME/.xlings/bin:$HOME/.xlings/subos/current/bin:$PATH"
           xlings install --verbose
@@ -34,7 +49,7 @@ jobs:
           echo "XMAKE_ROOT=y" >> $GITHUB_ENV
 
       - name: Install colcon-xmake
-        run: python3 -m pip install --break-system-packages --no-deps git+https://github.com/ros-x/colcon-xmake.git
+        run: python3 -m pip install --break-system-packages git+https://github.com/ros-x/colcon-xmake.git
 
       - name: Clone ament_xmake
         run: |
@@ -47,14 +62,12 @@ jobs:
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
           colcon build --packages-select ament_xmake --event-handlers console_direct+
 
-      - name: Build workspace
+      - name: Build all packages
         shell: bash
         run: |
           source /opt/ros/${{ matrix.ros_distro }}/setup.bash
           source install/setup.bash
-          colcon build \
-            --packages-up-to downstream_cmake_consumer demo_xmake_launch demo_xmake_custom_msg_node demo_xmake_component demo_xmake_mixed \
-            --event-handlers console_direct+
+          colcon build --event-handlers console_direct+
 
       - name: Run tests
         shell: bash

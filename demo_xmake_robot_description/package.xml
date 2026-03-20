@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>demo_xmake_robot_description</name>
+  <version>0.1.0</version>
+  <description>Example URDF robot model with xmake.</description>
+  <maintainer email="devnull@example.com">ros2_xmake maintainers</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_xmake</buildtool_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>ros2launch</exec_depend>
+
+  <export>
+    <build_type>ament_xmake</build_type>
+  </export>
+</package>
