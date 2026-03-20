@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例演示如何使用 ros2_tracing 框架对 ROS 2 系统进行性能追踪。通过 `demo_xmake_tracing` 包中的多阶段处理管线，你将学习如何录制追踪数据、分析回调延迟和调度抖动。
+本示例演示如何使用 ros2_tracing 框架对 ROS 2 系统进行性能追踪。通过 [`demo_xmake_tracing`](../demo_xmake_tracing) 包中的多阶段处理管线，你将学习如何录制追踪数据、分析回调延迟和调度抖动。
 
 **ROS 2 知识点**：ros2_tracing（LTTng）、回调延迟分析、tracetools、Trace Compass
 

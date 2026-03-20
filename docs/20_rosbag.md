@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_rosbag` 包，演示如何使用 **rosbag2** 的 C++ API 程序化录制和回放话题数据。
+本示例通过 [`demo_xmake_rosbag`](../demo_xmake_rosbag) 包，演示如何使用 **rosbag2** 的 C++ API 程序化录制和回放话题数据。
 
 **ROS 2 知识点**：rosbag2 API、程序化录制/回放
 

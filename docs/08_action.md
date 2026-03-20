@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_action` 包，演示 ROS 2 的 **Action** 通信模式。Action 是对 Service 的扩展，支持长时间运行的任务，并提供中间反馈和取消机制。
+本示例通过 [`demo_xmake_action`](../demo_xmake_action) 包，演示 ROS 2 的 **Action** 通信模式。Action 是对 Service 的扩展，支持长时间运行的任务，并提供中间反馈和取消机制。
 
 **ROS 2 知识点**：Action、Goal/Feedback/Result 生命周期、ActionServer、ActionClient、cancel
 
@@ -52,7 +52,7 @@ target("countdown_server")
     add_ros_deps("rclcpp", "rclcpp_action", "demo_xmake_interfaces")
 ```
 
-注意 `demo_xmake_interfaces` 是跨包依赖 — 使用的 `Countdown.action` 定义在另一个包中。`add_ros_deps()` 会自动解析跨包依赖关系。
+注意 [`demo_xmake_interfaces`](../demo_xmake_interfaces) 是跨包依赖 — 使用的 `Countdown.action` 定义在另一个包中。`add_ros_deps()` 会自动解析跨包依赖关系。
 
 ### 源码解读
 

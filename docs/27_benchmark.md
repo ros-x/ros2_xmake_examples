@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例演示如何测量 ROS 2 通信的延迟和吞吐量。通过 `demo_xmake_benchmark` 包，你将学习 ping-pong 延迟测量方法、吞吐量测试，以及 intra-process 零拷贝与 inter-process 通信的性能差异。
+本示例演示如何测量 ROS 2 通信的延迟和吞吐量。通过 [`demo_xmake_benchmark`](../demo_xmake_benchmark) 包，你将学习 ping-pong 延迟测量方法、吞吐量测试，以及 intra-process 零拷贝与 inter-process 通信的性能差异。
 
 **ROS 2 知识点**：通信延迟测量、吞吐量测试、intra-process vs inter-process、DDS 调优
 

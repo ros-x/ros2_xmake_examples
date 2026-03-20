@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_mixed` 包，演示如何在一个包中混合 C++ 和 Python 代码。C++ 节点作为发布者，Python 节点作为订阅者，通过 Topic 通信。
+本示例通过 [`demo_xmake_mixed`](../demo_xmake_mixed) 包，演示如何在一个包中混合 C++ 和 Python 代码。C++ 节点作为发布者，Python 节点作为订阅者，通过 Topic 通信。
 
 **ROS 2 知识点**：rclpy 基础、跨语言 Topic 通信
 

@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_dds_config` 包，演示如何管理 DDS/RMW 配置文件，并通过 launch 文件设置环境变量。
+本示例通过 [`demo_xmake_dds_config`](../demo_xmake_dds_config) 包，演示如何管理 DDS/RMW 配置文件，并通过 launch 文件设置环境变量。
 
 **ROS 2 知识点**：RMW 切换（FastDDS/CycloneDDS）、QoS XML Profile、DDS Discovery 配置
 

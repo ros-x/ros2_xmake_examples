@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例演示 ROS 2 最基本的通信模式：**Topic 发布/订阅**。通过 `demo_xmake_pubsub` 包，你将学习如何创建 Publisher 和 Subscriber 节点，并了解 xmake 构建 ROS 2 包的最小配置。
+本示例演示 ROS 2 最基本的通信模式：**Topic 发布/订阅**。通过 [`demo_xmake_pubsub`](../demo_xmake_pubsub) 包，你将学习如何创建 Publisher 和 Subscriber 节点，并了解 xmake 构建 ROS 2 包的最小配置。
 
 **ROS 2 知识点**：Node、Topic、Publisher、Subscriber、spin、回调函数
 

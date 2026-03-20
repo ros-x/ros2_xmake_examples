@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_lifecycle` 包，演示 ROS 2 的**生命周期节点**（Managed Node）。生命周期节点通过状态机控制节点的初始化、激活和清理过程。
+本示例通过 [`demo_xmake_lifecycle`](../demo_xmake_lifecycle) 包，演示 ROS 2 的**生命周期节点**（Managed Node）。生命周期节点通过状态机控制节点的初始化、激活和清理过程。
 
 **ROS 2 知识点**：LifecycleNode 状态机、Transition 回调、lifecycle_msgs
 

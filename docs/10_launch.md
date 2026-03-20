@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_launch` 包，演示 ROS 2 的 **Launch** 系统：多节点编排、参数文件加载和条件启动。
+本示例通过 [`demo_xmake_launch`](../demo_xmake_launch) 包，演示 ROS 2 的 **Launch** 系统：多节点编排、参数文件加载和条件启动。
 
 **ROS 2 知识点**：LaunchDescription、Node action、参数加载、namespace
 
@@ -56,7 +56,7 @@ target("demo_xmake_launch_marker")
 | 约定目录 | 无需配置 | `launch/`、`config/` 等标准目录 |
 | `install_ros_data()` | 显式调用 | 自定义目录或文件选择 |
 
-两种方式效果相同，约定目录更简洁。`demo_xmake_launch` 使用显式方式作为 API 演示。
+两种方式效果相同，约定目录更简洁。[`demo_xmake_launch`](../demo_xmake_launch) 使用显式方式作为 API 演示。
 
 ## 构建与运行
 

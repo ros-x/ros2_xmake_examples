@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_rviz_markers` 包，演示如何发布 RViz **Marker** 和 **MarkerArray** 用于可视化调试。
+本示例通过 [`demo_xmake_rviz_markers`](../demo_xmake_rviz_markers) 包，演示如何发布 RViz **Marker** 和 **MarkerArray** 用于可视化调试。
 
 **ROS 2 知识点**：visualization_msgs::Marker/MarkerArray、RViz 调试技巧
 

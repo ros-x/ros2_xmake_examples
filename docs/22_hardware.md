@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_hardware` 包，演示如何用 xmake 构建 **ros2_control** 硬件接口插件。
+本示例通过 [`demo_xmake_hardware`](../demo_xmake_hardware) 包，演示如何用 xmake 构建 **ros2_control** 硬件接口插件。
 
 **ROS 2 知识点**：ros2_control 架构、SystemInterface、hardware_interface 插件
 

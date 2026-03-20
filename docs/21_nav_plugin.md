@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_nav_plugin` 包，演示如何用 xmake 构建 Nav2 的 **Costmap Layer** 插件。
+本示例通过 [`demo_xmake_nav_plugin`](../demo_xmake_nav_plugin) 包，演示如何用 xmake 构建 Nav2 的 **Costmap Layer** 插件。
 
 **ROS 2 知识点**：Nav2 插件架构、costmap_2d layer 插件、pluginlib
 
@@ -38,7 +38,7 @@ target("demo_xmake_nav_plugin")
     add_ros_deps("rclcpp", "nav2_costmap_2d", "pluginlib")
 ```
 
-与 `demo_xmake_component` 相同的 `install_ros_plugin()` 模式，但基础包改为 `nav2_costmap_2d`。
+与 [`demo_xmake_component`](../demo_xmake_component) 相同的 `install_ros_plugin()` 模式，但基础包改为 `nav2_costmap_2d`。
 
 ## 构建与运行
 

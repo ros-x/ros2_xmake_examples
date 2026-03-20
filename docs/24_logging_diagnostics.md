@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例演示 ROS 2 的日志系统高级用法和诊断框架。通过 `demo_xmake_logging` 包，你将学习如何在运行时切换日志级别、使用 `diagnostic_updater` 发布系统健康状态，以及利用 `ros2 doctor` 进行系统检查。
+本示例演示 ROS 2 的日志系统高级用法和诊断框架。通过 [`demo_xmake_logging`](../demo_xmake_logging) 包，你将学习如何在运行时切换日志级别、使用 `diagnostic_updater` 发布系统健康状态，以及利用 `ros2 doctor` 进行系统检查。
 
 **ROS 2 知识点**：ros2 doctor、日志级别运行时切换、diagnostic_updater、自定义诊断
 

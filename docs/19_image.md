@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_image` 包，演示 ROS 2 的图像处理管线：使用 `cv_bridge` 在 ROS 消息和 OpenCV 之间转换。
+本示例通过 [`demo_xmake_image`](../demo_xmake_image) 包，演示 ROS 2 的图像处理管线：使用 `cv_bridge` 在 ROS 消息和 OpenCV 之间转换。
 
 **ROS 2 知识点**：sensor_msgs::Image、cv_bridge、image_transport
 

@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_qos` 包，演示 ROS 2 的 **QoS**（Quality of Service）配置，包括可靠性策略、持久性策略和 SensorDataQoS 预设。
+本示例通过 [`demo_xmake_qos`](../demo_xmake_qos) 包，演示 ROS 2 的 **QoS**（Quality of Service）配置，包括可靠性策略、持久性策略和 SensorDataQoS 预设。
 
 **ROS 2 知识点**：QoS Profile、Reliability、Durability、History、Depth、QoS 不兼容检测
 
