@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `downstream_cmake_consumer` 包，演示标准 `ament_cmake` 包如何消费 xmake 构建的包导出。这验证了 xmake 包的 CMake 互操作性。
+本示例通过 [`downstream_cmake_consumer`](../downstream_cmake_consumer) 包，演示标准 `ament_cmake` 包如何消费 xmake 构建的包导出。这验证了 xmake 包的 CMake 互操作性。
 
 **ROS 2 知识点**：find_package、ament_cmake 生态
 

@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_cpp` 包，演示如何用 xmake 构建 ROS 2 中的**静态库和共享库**，并让下游包通过 `find_package()` 消费。
+本示例通过 [`demo_xmake_cpp`](../demo_xmake_cpp) 包，演示如何用 xmake 构建 ROS 2 中的**静态库和共享库**，并让下游包通过 `find_package()` 消费。
 
 **ROS 2 知识点**：geometry_msgs::Twist、turtlesim 仿真
 

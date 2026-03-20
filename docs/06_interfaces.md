@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_interfaces` 包，演示如何定义和构建自定义的 ROS 2 消息（msg）、服务（srv）和动作（action）接口。
+本示例通过 [`demo_xmake_interfaces`](../demo_xmake_interfaces) 包，演示如何定义和构建自定义的 ROS 2 消息（msg）、服务（srv）和动作（action）接口。
 
 **ROS 2 知识点**：rosidl 代码生成管线、.msg/.srv/.action 定义语法
 

@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_component` 包，演示如何构建 ROS 2 **Composable Node**（组件节点），并使用 `install_ros_plugin()` 注册插件。
+本示例通过 [`demo_xmake_component`](../demo_xmake_component) 包，演示如何构建 ROS 2 **Composable Node**（组件节点），并使用 `install_ros_plugin()` 注册插件。
 
 **ROS 2 知识点**：Composable Node、Component Container、RCLCPP_COMPONENTS_REGISTER_NODE、零拷贝 intra-process
 

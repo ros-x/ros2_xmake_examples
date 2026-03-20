@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_executor` 包，演示 ROS 2 的**执行器**（Executor）和**回调组**（CallbackGroup）。
+本示例通过 [`demo_xmake_executor`](../demo_xmake_executor) 包，演示 ROS 2 的**执行器**（Executor）和**回调组**（CallbackGroup）。
 
 **ROS 2 知识点**：SingleThreadedExecutor、MultiThreadedExecutor、CallbackGroup（MutuallyExclusive vs Reentrant）
 

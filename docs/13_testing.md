@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_testing` 包，演示如何在 xmake 项目中集成 **gtest** 单元测试，并与 `colcon test` 兼容。
+本示例通过 [`demo_xmake_testing`](../demo_xmake_testing) 包，演示如何在 xmake 项目中集成 **gtest** 单元测试，并与 `colcon test` 兼容。
 
 **ROS 2 知识点**：ament 测试框架、gtest 集成、节点单元测试
 

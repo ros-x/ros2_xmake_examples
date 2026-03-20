@@ -2,7 +2,7 @@
 
 ## 概述
 
-本示例通过 `demo_xmake_robot_description` 包，演示如何管理 URDF 机器人模型并通过 launch 文件加载。
+本示例通过 [`demo_xmake_robot_description`](../demo_xmake_robot_description) 包，演示如何管理 URDF 机器人模型并通过 launch 文件加载。
 
 **ROS 2 知识点**：URDF 格式、robot_state_publisher、joint_state_publisher
 
