@@ -1,0 +1,6 @@
+param_node:
+  ros__parameters:
+    robot_name: "xmake_bot"
+    max_speed: 1.5
+    use_sim: true
+    wheel_radius: 0.05

@@ -110,4 +110,154 @@ if [[ "$MIXED_OUT" != *"C++ publisher started"* ]]; then
   exit 1
 fi
 
+echo "== runtime smoke: demo_xmake_pubsub talker =="
+set +e
+PUBSUB_OUT="$(timeout 3s ros2 run demo_xmake_pubsub talker 2>&1)"
+set -e
+echo "$PUBSUB_OUT"
+if [[ "$PUBSUB_OUT" != *"Talker node started"* ]]; then
+  echo "Talker node did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_service server =="
+set +e
+SRV_OUT="$(timeout 3s ros2 run demo_xmake_service add_two_ints_server 2>&1)"
+set -e
+echo "$SRV_OUT"
+if [[ "$SRV_OUT" != *"AddTwoInts server ready"* ]]; then
+  echo "Service server did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_timer =="
+set +e
+TIMER_OUT="$(timeout 5s ros2 run demo_xmake_timer timer_demo 2>&1)"
+set -e
+echo "$TIMER_OUT"
+if [[ "$TIMER_OUT" != *"TimerDemo started"* ]]; then
+  echo "Timer demo did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_params =="
+set +e
+PARAM_OUT="$(timeout 3s ros2 run demo_xmake_params param_node 2>&1)"
+set -e
+echo "$PARAM_OUT"
+if [[ "$PARAM_OUT" != *"ParamNode started"* ]]; then
+  echo "Param node did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_lifecycle =="
+set +e
+LC_OUT="$(timeout 3s ros2 run demo_xmake_lifecycle lifecycle_talker 2>&1)"
+set -e
+echo "$LC_OUT"
+if [[ "$LC_OUT" != *"LifecycleTalker created"* ]]; then
+  echo "Lifecycle talker did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_qos reliable_talker =="
+set +e
+QOS_OUT="$(timeout 3s ros2 run demo_xmake_qos reliable_talker 2>&1)"
+set -e
+echo "$QOS_OUT"
+if [[ "$QOS_OUT" != *"ReliableTalker started"* ]]; then
+  echo "QoS reliable talker did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_testing calculator =="
+set +e
+CALC_OUT="$(timeout 3s ros2 run demo_xmake_testing calculator_node 2>&1)"
+set -e
+echo "$CALC_OUT"
+if [[ "$CALC_OUT" != *"Calculator demo complete"* ]]; then
+  echo "Calculator demo did not complete"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_executor single_threaded =="
+set +e
+EXEC_OUT="$(timeout 3s ros2 run demo_xmake_executor single_threaded_demo 2>&1)"
+set -e
+echo "$EXEC_OUT"
+if [[ "$EXEC_OUT" != *"SingleThreadedExecutor running"* ]]; then
+  echo "Single threaded executor did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_params config file installed =="
+if [[ ! -f "$ROOT/install/demo_xmake_params/share/demo_xmake_params/config/defaults.yaml" ]]; then
+  echo "Params config file not installed"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_robot_description urdf installed =="
+if [[ ! -f "$ROOT/install/demo_xmake_robot_description/share/demo_xmake_robot_description/urdf/simple_robot.urdf" ]]; then
+  echo "URDF file not installed"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_dds_config files installed =="
+if [[ ! -f "$ROOT/install/demo_xmake_dds_config/share/demo_xmake_dds_config/config/fastdds_profile.xml" ]]; then
+  echo "FastDDS config not installed"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_nav_plugin plugin registration =="
+if [[ ! -f "$ROOT/install/demo_xmake_nav_plugin/share/demo_xmake_nav_plugin/plugin_description.xml" ]]; then
+  echo "Nav plugin description not installed"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_hardware plugin registration =="
+if [[ ! -f "$ROOT/install/demo_xmake_hardware/share/demo_xmake_hardware/plugin_description.xml" ]]; then
+  echo "Hardware plugin description not installed"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_logging diagnostics_node =="
+set +e
+DIAG_OUT="$(timeout 3s ros2 run demo_xmake_logging diagnostics_node 2>&1)"
+set -e
+echo "$DIAG_OUT"
+if [[ "$DIAG_OUT" != *"DiagnosticsNode started"* ]]; then
+  echo "Diagnostics node did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_tracing traced_pipeline =="
+set +e
+TRACE_OUT="$(timeout 3s ros2 run demo_xmake_tracing traced_pipeline 2>&1)"
+set -e
+echo "$TRACE_OUT"
+if [[ "$TRACE_OUT" != *"TracedPipeline started"* ]]; then
+  echo "Traced pipeline did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_benchmark latency_ping =="
+set +e
+PING_OUT="$(timeout 3s ros2 run demo_xmake_benchmark latency_ping 2>&1)"
+set -e
+echo "$PING_OUT"
+if [[ "$PING_OUT" != *"LatencyPing started"* ]]; then
+  echo "Latency ping did not start"
+  exit 1
+fi
+
+echo "== runtime smoke: demo_xmake_benchmark throughput_test =="
+set +e
+THRU_OUT="$(timeout 3s ros2 run demo_xmake_benchmark throughput_test 2>&1)"
+set -e
+echo "$THRU_OUT"
+if [[ "$THRU_OUT" != *"ThroughputTest started"* ]]; then
+  echo "Throughput test did not start"
+  exit 1
+fi
+
 echo "Runtime smoke checks passed (all phases)"

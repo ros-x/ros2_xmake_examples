@@ -1,0 +1,8 @@
+<library path="demo_xmake_nav_plugin">
+  <class type="demo_xmake_nav_plugin::GradientLayer"
+         base_class_type="nav2_costmap_2d::Layer">
+    <description>
+      A simple gradient costmap layer for demonstration purposes.
+    </description>
+  </class>
+</library>

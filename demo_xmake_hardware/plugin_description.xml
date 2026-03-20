@@ -1,0 +1,9 @@
+<library path="demo_xmake_hardware">
+  <class name="demo_xmake_hardware/MockRobotHardware"
+         type="demo_xmake_hardware::MockRobotHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      A mock robot hardware interface for demonstration purposes.
+    </description>
+  </class>
+</library>
