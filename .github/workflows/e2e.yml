@@ -35,7 +35,8 @@ jobs:
             ros-${{ matrix.ros_distro }}-hardware-interface \
             ros-${{ matrix.ros_distro }}-robot-state-publisher \
             ros-${{ matrix.ros_distro }}-joint-state-publisher \
-            ros-${{ matrix.ros_distro }}-diagnostic-updater
+            ros-${{ matrix.ros_distro }}-diagnostic-updater \
+            ros-${{ matrix.ros_distro }}-example-interfaces
 
       - name: Install xlings and xmake
         env:
