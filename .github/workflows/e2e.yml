@@ -23,7 +23,7 @@ jobs:
 
       - name: Install system and ROS dependencies
         run: |
-          apt-get update && apt-get install -y curl python3-pip git
+          apt-get update && apt-get install -y curl python3-pip git libopencv-dev
           apt-get install -y --no-install-recommends \
             ros-${{ matrix.ros_distro }}-tf2-ros \
             ros-${{ matrix.ros_distro }}-tf2-geometry-msgs \
