@@ -1,3 +1,7 @@
+---
+sidebar_position: 17
+title: "17. 可视化标记 — RViz Marker 调试"
+---
 # 17. 可视化标记 — RViz Marker 调试
 
 ## 概述

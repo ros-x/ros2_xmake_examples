@@ -1,3 +1,7 @@
+---
+sidebar_position: 22
+title: "22. 硬件接口 — ros2_control 驱动插件"
+---
 # 22. 硬件接口 — ros2_control 驱动插件
 
 ## 概述

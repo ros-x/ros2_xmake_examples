@@ -1,3 +1,7 @@
+---
+sidebar_position: 13
+title: "13. 测试集成 — gtest + colcon test"
+---
 # 13. 测试集成 — gtest + colcon test
 
 ## 概述

@@ -1,3 +1,7 @@
+---
+sidebar_position: 25
+title: "25. 性能追踪与分析 — ros2_tracing"
+---
 # 25. 性能追踪与分析 — ros2_tracing
 
 ## 概述

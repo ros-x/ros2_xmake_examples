@@ -1,3 +1,7 @@
+---
+sidebar_position: 11
+title: "11. 混合语言包 — C++ 发布 / Python 订阅"
+---
 # 11. 混合语言包 — C++ 发布 / Python 订阅
 
 ## 概述

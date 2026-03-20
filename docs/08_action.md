@@ -1,3 +1,7 @@
+---
+sidebar_position: 8
+title: "08. Action 通信 — Goal/Feedback/Result"
+---
 # 08. Action 通信 — Goal/Feedback/Result
 
 ## 概述

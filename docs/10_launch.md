@@ -1,3 +1,7 @@
+---
+sidebar_position: 10
+title: "10. Launch 系统 — 多节点编排与参数加载"
+---
 # 10. Launch 系统 — 多节点编排与参数加载
 
 ## 概述

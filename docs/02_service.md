@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+title: "02. 服务通信 — Client/Server 模型"
+---
 # 02. 服务通信 — Client/Server 模型
 
 ## 概述
