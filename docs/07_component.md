@@ -1,3 +1,7 @@
+---
+sidebar_position: 7
+title: "07. 组件插件 — Composable Node 与 pluginlib"
+---
 # 07. 组件插件 — Composable Node 与 pluginlib
 
 ## 概述

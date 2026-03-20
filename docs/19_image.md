@@ -1,3 +1,7 @@
+---
+sidebar_position: 19
+title: "19. 图像处理 — cv_bridge 与 image_transport"
+---
 # 19. 图像处理 — cv_bridge 与 image_transport
 
 ## 概述

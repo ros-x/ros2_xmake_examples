@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+title: "01. 发布者/订阅者 — Topic 通信基础"
+---
 # 01. 发布者/订阅者 — Topic 通信基础
 
 ## 概述

@@ -1,3 +1,7 @@
+---
+sidebar_position: 23
+title: "23. DDS 配置 — RMW 切换与 QoS Profile"
+---
 # 23. DDS 配置 — RMW 切换与 QoS Profile
 
 ## 概述

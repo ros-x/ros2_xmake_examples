@@ -1,3 +1,7 @@
+---
+sidebar_position: 6
+title: "06. 自定义接口 — msg/srv/action 定义与 rosidl"
+---
 # 06. 自定义接口 — msg/srv/action 定义与 rosidl
 
 ## 概述

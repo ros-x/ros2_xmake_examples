@@ -1,3 +1,7 @@
+---
+sidebar_position: 20
+title: "20. 数据录制回放 — rosbag2 程序化 API"
+---
 # 20. 数据录制回放 — rosbag2 程序化 API
 
 ## 概述

@@ -1,3 +1,7 @@
+---
+sidebar_position: 16
+title: "16. 机器人模型 — URDF 与 robot_state_publisher"
+---
 # 16. 机器人模型 — URDF 与 robot_state_publisher
 
 ## 概述

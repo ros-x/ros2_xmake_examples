@@ -1,3 +1,7 @@
+---
+sidebar_position: 14
+title: "14. CMake 互操作 — xmake 包被 CMake 消费"
+---
 # 14. CMake 互操作 — xmake 包被 CMake 消费
 
 ## 概述
